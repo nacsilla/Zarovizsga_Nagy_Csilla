@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Unit teszt feladat</title>
+	<script type="text/javascript">
+	<!-- Ide jön  a feladat megoldása... -->
+	
+	function kivalogatParosOtven(szamok) {
+			var parosEsOtven = [];
+
+			for (var i = 0; i < szamok.length; i++) {
+				if (szamok[i] > 50 && szamok[i] % 2 == 0) {
+					parosEsOtven.push(szamok[i]);
+				}
+			}
+			return parosEsOtven;
+		}
+
+
+		function aBetukSzamaDiv(){
+			
+			var div = document.querySelector("div").innerHTML;
+			var tomb = div.split('');
+			
+			var db = 0;
+	
+			for(var i = 0; i < tomb.length; i++){
+				if(tomb[i] == ["a"]){
+					db++
+				}
+			}
+			return db;
+		}
+
+		function osszeadasFeliras(eredmeny, szam1, szam2){
+
+			var divE = document.querySelector("div");
+			var div = document.getElementsByClassName("eredmeny"); 
+			var x = document.getElementsByClassName("szam1");
+			var y = document.getElementsByClassName("szam2");
+			
+			var paragrafus = document.createElement("p");
+
+			var osszeg = (szam1  + szam2);
+			x = szam1;
+			y = szam2;
+			
+			var pszoveg = document.createTextNode(`${x} + ${y} = ${osszeg}`);
+			paragrafus.appendChild(pszoveg);
+			
+			divE.appendChild(paragrafus);
+
+		}
+
+	//<!-- Idáig -->
+	</script>
+	<script src="testBaseUnit.js"></script>
+</head>
+<body>
+    <div></div>
+	<hr>
+	<div id="testResult">
+	<h2>Tesztek</h2></div>
+</body>
+</html>
